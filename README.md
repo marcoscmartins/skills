@@ -4,5 +4,5 @@ Aplicação que permite ao usuário registrar as suas competências, como tecnol
 ## tecnologias
 - [nest](https://docs.nestjs.com/)
 - [typescript](https://www.typescriptlang.org/)
-- orm with [sequilize](https://sequelize.org/)
+- orm with [sequelize](https://sequelize.org/)
 - tests with [jest](https://jestjs.io/pt-BR/)
