@@ -1,0 +1,22 @@
+{
+  "name": "skills",
+  "version": "1.0.0",
+  "description": "Get track of your skills",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoscmartins/skills.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcoscmartins/skills/issues"
+  },
+  "homepage": "https://github.com/marcoscmartins/skills#readme",
+  "dependencies": {
+    "nest": "^0.1.6"
+  }
+}
