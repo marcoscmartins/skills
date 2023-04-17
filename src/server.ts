@@ -6,13 +6,12 @@ import { errors } from 'celebrate';
   
 const app = express(); 
   
-app.use(cors(/*{ origin:'http://www' 
- }*/)); 
+app.use(cors()); 
 //para habilitar a utilização de json nas requisições com body em json 
 app.use(express.json()); 
 app.use(routes); 
   
-app.use('/uploads', express.static(path.resolve(__dirname, '../', 'uploads'))); 
+// app.use('/uploads', express.static(path.resolve(__dirname, '../', 'uploads'))); 
   
 app.use(errors()); 
   
