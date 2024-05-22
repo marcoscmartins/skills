@@ -34,6 +34,35 @@ class SkillsController {
 
     return response.json({ id, ...skill });
   }
+  async update(request: Request, response: Response) {
+
+    const { nome, nivel, link, linguagem } = request.body;
+    const { id } = request.params;
+    
+    let obUpdate = {};
+    if (nome)      obUpdate = { ...obUpdate, nome };
+    if (nivel)     obUpdate = { ...obUpdate, nivel };
+    if (link)      obUpdate = { ...obUpdate, link };
+    if (linguagem) obUpdate = { ...obUpdate, linguagem };
+
+    const trx = await knex.transaction();
+    const skill = await trx('skills').where('id', id).update(obUpdate);
+    await trx.commit();
+
+    // console.log( nome, nivel, link, linguagem);
+
+    return response.json({ id, ...obUpdate });
+  }
+  async delete(request: Request, response: Response) {
+
+    const { id } = request.params;
+    const trx = await knex.transaction();
+    const skill = await trx('skills').where('id', id).del();
+    console.log(skill);
+    await trx.commit();
+
+    return response.json({ id, skill });
+  }
 }
 
 export default SkillsController;

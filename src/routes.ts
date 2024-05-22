@@ -11,6 +11,8 @@ const skillsController = new SkillsController();
 routes.get('/skills', skillsController.index);
 routes.post('/skills', skillsController.create);
 routes.get('/skills/:id', skillsController.show);
+routes.patch('/skills/:id', skillsController.update);
+routes.delete('/skills/:id', skillsController.delete);
 
 routes.get('/', (request:Request, response:Response) => response.send('Hello world'));
 
